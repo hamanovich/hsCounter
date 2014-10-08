@@ -34,11 +34,11 @@ You can use plugin with default options, e.g.:
 ``` javascript
 (function($){
   $('.countup').hsCounter({
-    delay: 100,
-    signPos: 'before',
-    classVisible: 'i-can-see-you',
-    decimalSeparator: '&acute;',
-    orderSeparator: ','
+    delay: 100,                     // timeout between iterations 
+    signPos: 'before',              // sign position 'before' or 'after'
+    classVisible: 'i-can-see-you',  // name of class when counter is visible on screen
+    decimalSeparator: '&acute;',    // decimal separator
+    orderSeparator: ','             // order number separator
   });
 })(jQuery)
 ```

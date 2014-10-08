@@ -15,6 +15,11 @@ Include this script after jQuery. Requires jQuery 1.8+.
 ```
 Of course omit the first line if you already have jQuery included.
 
+Add HTML markup to your counter, like this:
+``` html
+<div class="countup" data-increment="0.123" data-num="10.546" data-fractional="3">0</div> 
+```
+
 After that, you need to write this code (or put at the end of your custom jquery code):
 ``` javascript
 (function($){

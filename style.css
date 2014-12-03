@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+code{
+    margin-bottom: 40px;
+    float: left;
+    width: 100%;
+}
+
+.container{
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
+
+.container:first-child{
+    margin-bottom: 0;
+}
+
+.countup,
+.countup-custom{
+    font-size: 55px;
+    line-height: 1;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.countup ins {
+    display: block;
+    width: 0;
+    height: 3px;
+    content: '\0020';
+    border-bottom: 3px solid #e79501;
+    margin-top: 10px;
+}
+
+.countup-wrap span {
+    font-size: 19px;
+    color: #333;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 5px;
+}
+
+.countup-wrap .countup {
+    font-size: 19px;
+    color: #e79501;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0;
+}
+
+.countup-wrap .countup * {
+    color: #e79501;
+}
+
+.countup-wrap .countup-line {
+    display: block;
+    width: 0;
+    height: 3px;
+    content: '\0020';
+    border-bottom: 3px solid #e79501;
+}
+
+.countup-wrap + .countup-wrap {
+    margin-top: 17px;
+}

@@ -24,6 +24,7 @@ code{
 .countup,
 .countup-custom{
     font-size: 55px;
+    min-height: 55px;
     line-height: 1;
     color: #ccc;
     margin-bottom: 30px;
@@ -49,6 +50,7 @@ code{
 
 .countup-wrap .countup {
     font-size: 19px;
+    min-height: 19px;
     color: #e79501;
     vertical-align: middle;
     display: inline-block;

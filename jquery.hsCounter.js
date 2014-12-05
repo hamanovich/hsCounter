@@ -1,10 +1,10 @@
 /*!
- * jquery.hsCounter.js 1.3
+ * jquery.hsCounter.js 1.4
  *
  * Copyright 2014, Siarhei Hamanovich http://2i.by @hamanovich
  * Released under the GPL v2 License
  *
- * Date: Dec 3, 2014
+ * Date: Dec 5, 2014
  */
 
 (function ($) {
@@ -32,12 +32,12 @@
                 fractional = self.data('fractional') ? self.data('fractional') : 0,
                 sign = self.data('sign') ? self.data('sign') : '',
                 regExp = /(\d)(?=(\d\d\d)+([^\d]|$))/g,
-                defHtml = self.html(),
-                i = 0,
+                i = self.data('start') ? +self.data('start') : 0,
+                amount = $('.countup-amount'),
                 timer,
                 num,
-                ins,
-                line;
+                line,
+                content;
 
             if (winTop <= self.offset().top && (winTop + winHeight) >= self.offset().top && !self.hasClass(settings.classVisible)) {
                 timer = setTimeout(function run() {
@@ -52,16 +52,18 @@
                         .replace('.', settings.decimalSeparator)
                         .replace(regExp, '$1' + settings.orderSeparator);
 
+                    content = self.find(amount).html(num);
+
                     if (settings.signPos == 'after') {
-                        self.html(num + '&nbsp;' + '<span class="countup-sign">' + sign + '</span>' + defHtml);
+                        self.html('<span class="countup-amount">' + num + '</span>' + '&nbsp;' + '<span class="countup-sign">' + sign + '</span>');
 
                     } else if (settings.signPos == 'before') {
-                        self.html('<span class="countup-sign">' + sign + '</span>' + '&nbsp;' + num + defHtml);
+                        self.html('<span class="countup-sign">' + sign + '</span>' + '&nbsp;' + '<span class="countup-amount">' + num + '</span>');
                     }
 
                     if (self.hasClass('progress-up')) {
-                        ins = self.find('ins');
-                        ins.css('width', i + '%');
+                        self.html(self.html() + '<ins/>');
+                        self.find('ins').css('width', i + '%');
                     }
 
                     if (self.parent().hasClass('countup-wrap')) {

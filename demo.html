@@ -23,7 +23,7 @@
     </div>
     <div class="countup" data-increment="1" data-num="100"></div>
     <code>
-            &lt;div class="countup" data-increment="1" data-num="100"&gt;0&lt;/div&gt;
+        &lt;div class="countup" data-increment="1" data-num="100"&gt;&lt;/div&gt;
     </code>
 </div>
 
@@ -36,6 +36,17 @@
         &lt;div class="countup" data-increment="1000" data-num="1000000"&gt;&lt;/div&gt;
     </code>
 </div>
+
+<div class="container">
+    <div class="page-header">
+        <h2>Start At Any Number</h2>
+    </div>
+    <div class="countup" data-increment="1" data-num="500" data-start="100"></div>
+    <code>
+        &lt;div class="countup" data-increment="1" data-start="100" data-num="500"&gt;&lt;/div&gt;
+    </code>
+</div>
+
 
 <div class="container">
     <div class="page-header">
@@ -153,17 +164,17 @@
         <h2>More and more examples</h2>
     </div>
     <div class="col-sm-4">
-        <div class="countup progress-up" data-increment="1" data-num="46" data-sign="&percnt;"><ins></ins></div>
+        <div class="countup progress-up" data-increment="1" data-num="46" data-sign="&percnt;" data-start="30"></div>
         <h4>Photoshop</h4>
         <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero ace venenatis faucibus.</p>
     </div>
     <div class="col-sm-4">
-        <div class="countup progress-up" data-increment="1" data-num="95" data-sign="&percnt;"><ins></ins></div>
+        <div class="countup progress-up" data-increment="1" data-num="95" data-sign="&percnt;"></div>
         <h4>Graphic Design</h4>
         <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero ace venenatis faucibus.</p>
     </div>
     <div class="col-sm-4">
-        <div class="countup progress-up" data-increment="1" data-num="73" data-sign="&percnt;"><ins></ins></div>
+        <div class="countup progress-up" data-increment="1" data-num="73" data-sign="&percnt;"></div>
         <h4>WordPress</h4>
         <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero ace venenatis faucibus.</p>
     </div>
@@ -176,14 +187,14 @@
         <h2>Ka-booom example</h2>
     </div>
     <div class="col-sm-5">
-        <div class="countup extra" data-increment="0.097" data-fractional="3" data-num="9.864"><ins></ins></div>
+        <div class="countup extra" data-increment="0.097" data-fractional="3" data-num="9.864" data-start="3.4565"></div>
     </div>
 </article>
 <!-- /.container -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="jquery.hsCounter.min.js"></script>
+<script src="jquery.hsCounter.js"></script>
 <script>
     (function($) {
         var $countup = $('.countup'),
